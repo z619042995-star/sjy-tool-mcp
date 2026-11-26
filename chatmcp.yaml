@@ -13,14 +13,14 @@ params:
 
 local: |
   pip install -r requirements.txt
-  python mcp_server_stdio.py
+  python server.py
 
 config: |
   {
     "mcpServers": {
       "date-tool-mcp": {
         "command": "python",
-        "args": ["mcp_server_stdio.py"]
+        "args": ["server.py"]
       }
     }
   }

@@ -12,11 +12,15 @@
 
 ```
 001/
-├── mcp_server_stdio.py        # stdio 传输
+├── server.py                  # 发布用 stdio 入口（python server.py）
+├── mcp_server_stdio.py        # stdio 传输示例
 ├── mcp_server_sse.py          # SSE 传输
 ├── mcp_server_streamable.py   # Streamable HTTP 传输
 ├── mcp_client.py              # LangChain + MCP 客户端
-└── requirements.txt
+├── chatmcp.yaml               # ChatMCP 安装配置
+├── LAUNCHGUIDE.md             # MCP Marketplace 提交信息
+├── requirements.txt
+└── LICENSE
 ```
 
 ## 环境要求
