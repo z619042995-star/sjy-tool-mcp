@@ -1,4 +1,8 @@
-# MCP 三种传输方式演示
+<p align="center">
+  <img src="assets/logo.png" alt="Date Tool MCP logo" width="160" height="160" />
+</p>
+
+# Date Tool MCP — 三种传输方式演示
 
 用同一个工具（`get_today`，返回当前日期）演示 MCP 的三种传输方式，并用 LangChain Agent 作为客户端调用：
 
@@ -19,14 +23,32 @@
 ├── mcp_client.py              # LangChain + MCP 客户端
 ├── chatmcp.yaml               # ChatMCP 安装配置
 ├── LAUNCHGUIDE.md             # MCP Marketplace 提交信息
+├── llms-install.md            # 供 Cline 等 AI Agent 自动安装
+├── assets/logo.png            # 400×400 项目图标
 ├── requirements.txt
 └── LICENSE
+```
+
+## 作为 MCP 服务端安装
+
+服务端本身**不需要任何 API Key**。stdio 配置如下（详见 `llms-install.md`，供 Cline 等 AI Agent 自动安装）：
+
+```json
+{
+  "mcpServers": {
+    "date-tool-mcp": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "/absolute/path/to/sjy-tool-mcp"
+    }
+  }
+}
 ```
 
 ## 环境要求
 
 - Python 3.10+
-- 一个可用的 DashScope API Key（客户端使用 `qwen-plus`）
+- 一个可用的 DashScope API Key（**仅**运行 `mcp_client.py` 演示时需要，服务端不需要）
 
 ## 安装
 
