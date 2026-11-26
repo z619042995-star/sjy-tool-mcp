@@ -1,0 +1,26 @@
+name: date-tool-mcp
+description: 一个返回当前日期的 MCP 服务，演示 stdio / SSE / Streamable HTTP 三种传输方式
+author: https://github.com/z619042995-star/sjy-tool-mcp
+license: MIT
+tags:
+  - date-tool
+  - mcp
+  - langchain
+
+params:
+  type: object
+  properties: {}
+
+local: |
+  pip install -r requirements.txt
+  python mcp_server_stdio.py
+
+config: |
+  {
+    "mcpServers": {
+      "date-tool-mcp": {
+        "command": "python",
+        "args": ["mcp_server_stdio.py"]
+      }
+    }
+  }
